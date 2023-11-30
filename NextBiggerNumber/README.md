@@ -26,6 +26,7 @@ int nextBigger(int n) {
     return -1;
 }
 ```
+
 This function, **nextBigger**, finds the next bigger number with the same digits as the input number **n**. Here's the breakdown:
 
 - **std::string maxStr = sortedDigits(n);** : Calls the **sortedDigits** function to get the maximum possible permutation of digits for **n** and stores it as a string.
