@@ -1,4 +1,4 @@
-# Break down the C++ code step by step:
+# Break down of the C++ code step by step:
 ```c++
 #include <iostream>
 #include <algorithm>
