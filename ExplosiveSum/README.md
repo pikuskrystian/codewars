@@ -6,8 +6,9 @@ Let's break down the exp_sum function step by step:
 ```cpp
 #include <iostream>
 #include <vector>
-We include the necessary header files for input/output operations (iostream) and to use the std::vector container (vector) in C++.
 ```
+We include the necessary header files for input/output operations (iostream) and to use the std::vector container (vector) in C++.
+
 
 # Type Alias:
 
