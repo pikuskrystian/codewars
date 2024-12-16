@@ -1,56 +1,23 @@
-### Step by step break down of the code:
+General Patron is faced with a problem , his intelligence has intercepted some secret messages from the enemy but they are all encrypted. Those messages are crucial to getting the jump on the enemy and winning the war. Luckily intelligence also captured an encoding device as well. However even the smartest programmers weren't able to crack it though. So the general is asking you , his most odd but brilliant programmer.
 
-## 1 Initialization:
-```cpp
-string w, out, test;
-string alph = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,? ";
-```
-- Three strings are declared: w (used for temporary storage), out (the final decoded output), and test (used to store the encoded value for comparison).
-- The alph string contains the characters that are being tested during decoding.
+You can call the encoder like this.
 
-## 2 Setting Sizes:
-```cpp
-int max = p_what.length();
-w.resize(max);
-out.resize(max);
-test.resize(max);
-```
-- The variable max is set to the length of the input string p_what.
-- The resize function is used to resize the strings w, out, and test to the length of p_what.
+std::cout << Encoder::encode("Hello World!");
+Our cryptoanalysts kept poking at it and found some interesting patterns.
 
-## 3 Looping Through Alphabets:
-```cpp
-for (int ii = 0; ii < 67; ii++)
-{
-    // Set w to the current character of the alphabet
-    for (int yy = 0; yy < max; yy++)
-        w[yy] = alph[ii];
-
-    // Get the encoding for the current character
-    test = Encoder::encode(w);
-
-    // Update out based on the match with test
-    for (int yy = 0; yy < max; yy++)
-    {
-        if (p_what[yy] == '-' && out[yy] != '-')
-            continue;  // Skip already modified characters
-        if (p_what[yy] == test[yy])
-            out[yy] = w[yy];
-    }
+std::cout << (Encoder::encode ("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")) << "\n" ;
+std::cout << (Encoder::encode ("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")) << "\n" ;  
+std::cout << (Encoder::encode ("!@#$%^&*()_+-")) << "\n" ;
+std::string a, b, c;
+for (const auto& w : std::string("abcdefghijklmnopqrstuvwxyz")) {
+    a += Encoder::encode (std::string(  "") + w)[0];
+    b += Encoder::encode (std::string( "_") + w)[1];
+    c += Encoder::encode (std::string("__") + w)[2];
 }
-```
--The outer loop iterates through each character in the alph string (67 characters in total).
--The inner loop sets the temporary string w to the current character from alph.
--The Encoder::encode function is called to get the encoded value for the current character, stored in the test string.
--The next inner loop compares each character in p_what with the corresponding character in test.
--If the character in p_what is a hyphen ('-'), and the corresponding character in out is not already modified, it is skipped.
--If the characters in p_what and test match, the corresponding character in out is updated with the character from w.
-## 4 Final Output:
-```cpp
-return out;
-```
--The final decoded string out is returned.
-## 5 Summary
-In summary, the code attempts to decode an input string p_what by iterating through each character in the alph string, encoding it, 
-and updating the output string out based on the matching characters with the encoded value. 
-The decoding is done by trial and error for each character in the alphabet.
+std::cout << a << "\n";
+std::cout << b << "\n";
+std::cout << c << "\n";        
+We think if you keep on this trail you should be able to crack the code! You are expected to fill in the
+
+std::string Decoder::decode(const std::string&)
+function. Good luck ! General Patron is counting on you!
