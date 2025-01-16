@@ -25,7 +25,7 @@ The directory structure is organized to clearly separate and document each probl
         readme.md: Includes the problem statement, constraints, and any additional notes or explanations.
 
 Example Directory Structure:
-
+```
 problems/
 ├── two_sum/
 │   ├── main.cpp
@@ -33,7 +33,7 @@ problems/
 ├── valid_parentheses/
 │   ├── main.cpp
 │   ├── readme.md
-
+```
 How to Use:
 
     To view the problem statement: Open the readme.md file inside the specific problem's directory.
