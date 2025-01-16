@@ -6,9 +6,6 @@ Welcome to my Codewars Code Challenges repository! This collection includes solu
 
 - [Introduction](#introduction)
 - [Directory Structure](#directory-structure)
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
