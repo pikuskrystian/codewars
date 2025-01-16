@@ -13,7 +13,7 @@ Welcome to my Codewars Code Challenges repository! This collection includes solu
 
 Feel free to explore the code, learn from the solutions, and contribute your own solutions if you have different approaches!
 
-Directory Structure
+## Directory Structure
 
 The directory structure is organized to clearly separate and document each problem. Each problem from Codewars or LeetCode is stored in its own dedicated directory. Here's how it works:
 
